@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sedrah Zither - Principal</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    #banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 2px solid #888;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ccc;
+      padding: 10px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    #content-area {
+      padding: 100px 20px 20px;
+    }
+
+    button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner com imagem -->
+  <div id="banner">
+    <img src="provas/SEDRAH ZITHER.png" alt="Banner Sedrah Zither" />
+  </div>
+
+  <!-- Menu de navegação fixo -->
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('arquivos')">Arquivos</a></li>
+      <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+      <li><a href="#" onclick="showSection('premium')">Premium</a></li>
+    </ul>
+  </nav>
+
+  <!-- Área onde o conteúdo será exibido -->
+  <div id="content-area"></div>
+
+  <!-- Seções ocultas para clonar -->
+  <div id="arquivos" class="hidden">
+    <button onclick="location.href='pages/conta.html'">Arquivo Conta (c)</button>
+    <button onclick="location.href='pages/video.html'">Arquivo Vídeo (v)</button>
+    <button onclick="location.href='pages/pessoa.html'">Arquivo Pessoa (p)</button>
+    <button onclick="location.href='pages/foto.html'">Arquivo Foto (f)</button>
+    <button onclick="location.href='pages/caso.html'">Arquivo Caso (ca)</button>
+    <button onclick="location.href='pages/supercaso.html'">Arquivo Super Caso (sca)</button>
+  </div>
+
+  <div id="contato" class="hidden">
+    <p>Telefone 1: (31) 99999-1234</p>
+    <p>Telefone 2: (31) 98888-5678</p>
+  </div>
+
+  <div id="premium" class="hidden">
+    <!-- Conteúdo em branco -->
+  </div>
+
+  <!-- Script para trocar seções -->
+  <script>
+    function showSection(id) {
+      const contentArea = document.getElementById("content-area");
+      contentArea.innerHTML = ""; // Limpa conteúdo anterior
+
+      const section = document.getElementById(id);
+      if (section) {
+        const clone = section.cloneNode(true);
+        clone.classList.remove("hidden");
+        contentArea.appendChild(clone);
+      }
+    }
+  </script>
+</body>
+</html>
