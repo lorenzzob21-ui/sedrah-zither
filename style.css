@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#login-screen {
+  text-align: center;
+  margin-top: 100px;
+}
+
+nav {
+  background-color: #ccc;
+  padding: 10px;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#content-area {
+  padding: 20px;
+}
+
+button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 200px;
+}
+
+canvas {
+  display: block;
+  background-color: black;
+}
+#banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #888;
+}
